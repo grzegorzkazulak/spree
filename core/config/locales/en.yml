@@ -78,7 +78,7 @@ en:
         available_on: "Available On"
         cost_price: "Cost Price"
         description: Description
-        master_price: "Master Price"
+        price: "Price"
         name: Name
         on_hand: "On Hand"
         shipping_category: "Shipping Category"
@@ -474,7 +474,7 @@ en:
   mail_server_preferences: Mail Server Preferences
   make_refund: Make refund
   mark_shipped: "Mark Shipped"
-  master_price: "Master Price"
+  price: "Master Price"
   max_items: Max Items
   meta_description: "Meta Description"
   meta_keywords: "Meta Keywords"
@@ -647,14 +647,14 @@ en:
         description: "Scopes for selecting products based on option and property values"
         name: Values
     scopes:
-      ascend_by_master_price:
-        name: Ascend by product master price
+      ascend_by_price:
+        name: Ascend by product price
       ascend_by_name:
         name: Ascend by product name
       ascend_by_updated_at:
         name: Ascend by actualization date
-      descend_by_master_price:
-        name: Descend by product master price
+      descend_by_price:
+        name: Descend by product price
       descend_by_name:
         name: Descend by product name
       descend_by_popularity:
@@ -685,13 +685,13 @@ en:
         description: "Taxon names have to be separated by comma or space(eg. adidas,shoes)"
         name: "In taxons and all their descendants"
         sentence: in <em>%s</em> and all their descendants
-      master_price_gte:
+      price_gte:
         args:
           amount: Amount
         description: ""
         name: "Master price greater or equal to"
         sentence: price greater or equal to <em>%.2f</em>
-      master_price_lte:
+      price_lte:
         args:
           amount: Amount
         description: ""

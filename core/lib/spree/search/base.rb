@@ -49,7 +49,7 @@ module Spree::Search
       @properties[:page] = (params[:page].to_i <= 0) ? 1 : params[:page].to_i 
       
       if !params[:order_by_price].blank?
-        @product_group = ProductGroup.new.from_route([params[:order_by_price]+"_by_master_price"])
+        @product_group = ProductGroup.new.from_route([params[:order_by_price]+"_by_price"])
       elsif params[:product_group_name]
         @cached_product_group = ProductGroup.find_by_permalink(params[:product_group_name])
         @product_group = ProductGroup.new

@@ -37,7 +37,7 @@ When /^(?:|I )add a product with (.*?)? to cart$/ do |captured_fields|
     fields[name] = value.delete('"')
   end
   price = fields.delete('price')
-  if Product.master_price_equals(price).count(:conditions => fields) == 0
+  if Product.price_equals(price).count(:conditions => fields) == 0
     Factory(:product, fields.merge('price' => price))
   end
   When %{I go to the products page}

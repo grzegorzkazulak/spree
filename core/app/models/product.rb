@@ -76,23 +76,6 @@ class Product < ActiveRecord::Base
     scope :group_by_products_id, { :group => "products.id" }
   end
 
-
-  # ----------------------------------------------------------------------------------------------------------
-  #
-  # The following methods are deprecated and will be removed in a future version of Spree
-  #
-  # ----------------------------------------------------------------------------------------------------------
-
-  def master_price
-    warn "[DEPRECATION] `Product.master_price` is deprecated.  Please use `Product.price` instead. (called from #{caller[0]})"
-    self.price
-  end
-
-  def master_price=(value)
-    warn "[DEPRECATION] `Product.master_price=` is deprecated.  Please use `Product.price=` instead. (called from #{caller[0]})"
-    self.price = value
-  end
-
   def variants?
     warn "[DEPRECATION] `Product.variants?` is deprecated.  Please use `Product.has_variants?` instead. (called from #{caller[0]})"
     self.has_variants?

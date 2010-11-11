@@ -25,8 +25,8 @@ module Scopes::Product
     # product selection based upon master price
     :price => {
       :price_between => [:low, :high],
-      :master_price_lte => [:amount],
-      :master_price_gte => [:amount],
+      :price_lte => [:amount],
+      :price_gte => [:amount],
     },
   }
 
@@ -35,8 +35,8 @@ module Scopes::Product
     :descend_by_updated_at,
     :ascend_by_name,
     :descend_by_name,
-    :ascend_by_master_price,
-    :descend_by_master_price,
+    :ascend_by_price,
+    :descend_by_price,
     :descend_by_popularity,
   ]
 

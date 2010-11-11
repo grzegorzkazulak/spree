@@ -13,7 +13,7 @@ module Scopes::Dynamic
     if ranges >= 2
       l = all_prices.length / ranges
       scopes << ProductScope.new({
-          :name => "master_price_lte",
+          :name => "price_lte",
           :arguments => [all_prices[l]]
         })
       (ranges - 2).times do |x|
@@ -26,7 +26,7 @@ module Scopes::Dynamic
           })
       end
       scopes << ProductScope.new({
-          :name => "master_price_gte",
+          :name => "price_gte",
           :arguments => [all_prices[l*(ranges-1)+1]]
         })
     end

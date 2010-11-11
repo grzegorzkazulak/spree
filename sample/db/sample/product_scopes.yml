@@ -1,7 +1,7 @@
 ---
 product_scopes_007:
   product_group: product_groups_001
-  name: master_price_lte
+  name: price_lte
   arguments: |
     ---
     - "20"
